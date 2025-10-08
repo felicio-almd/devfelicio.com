@@ -2,33 +2,13 @@
 import { ref, computed } from 'vue';
 import { Icon } from '@iconify/vue';
 
-// --- State Management ---
 const activeSection = ref('sobre');
-
-// --- Data Definitions ---
-const icons = {
-  Github: 'i-mdi-github',
-  Linkedin: 'i-mdi-linkedin',
-  Mail: 'i-mdi-email',
-  Phone: 'i-mdi-phone',
-  MapPin: 'i-mdi-map-marker',
-  Building2: 'i-mdi-office-building',
-  Calendar: 'i-mdi-calendar',
-  Briefcase: 'i-mdi-briefcase'
-};
-
-const skills = {
-  avancado: ['PHP', 'Laravel', 'Node.js', 'JavaScript', 'React', 'CSS', 'Tailwind', 'MySQL', 'Git', 'Docker'],
-  intermediario: ['TypeScript', 'Vue', 'Java', 'Spring Boot', 'React Native', 'Supabase', 'Linux', 'UX/UI'],
-  ferramentas: ['Docker', 'GCP', 'Git/GitHub', 'Firebase', 'APIs REST']
-};
 
 const experiences = [
   {
     title: 'Desenvolvedor Fullstack - Estagiário',
     company: 'Prefeitura Municipal de São Mateus',
     period: '04/2024 - Atual',
-    icon: icons.Building2,
     responsibilities: [
       'Desenvolvimento e manutenção de soluções web escaláveis para transformação digital utilizando PHP, Laravel, JavaScript, React, MySQL e Docker',
       'Co-liderança no projeto do Sistema Integrado de Gestão Esportiva Municipal, sendo responsável por decisões de arquitetura e implementação de funcionalidades críticas',
@@ -40,7 +20,6 @@ const experiences = [
     title: 'Desenvolvedor Fullstack - Freelancer',
     company: 'Sistema Benedo - Gerenciamento de Corretores',
     period: '05/2025 - 07/2025',
-    icon: icons.Briefcase, 
     responsibilities: [
       'Desenvolvimento completo de plataforma para gestão de corretores e imobiliárias, desde modelagem de dados até infraestrutura',
       'Implementação de funcionalidades como controle de status, check-ins, monitoramento em tempo real e sorteios automáticos',
@@ -52,7 +31,6 @@ const experiences = [
     title: 'Desenvolvedor Fullstack',
     company: 'Adapti Soluções Web (Empresa Jr)',
     period: '12/2023 - 07/2025',
-    icon: icons.Building2, 
     responsibilities: [
       'Desenvolvimento de aplicações web com Laravel e React/Next.js, incluindo criação de APIs RESTful',
       'Liderança de equipe no desenvolvimento e publicação do site Credfacil',
@@ -79,7 +57,6 @@ const projects = [
   }
 ];
 
-// --- Methods ---
 const scrollToSection = (sectionId) => {
   activeSection.value = sectionId;
   const element = document.getElementById(sectionId);
@@ -95,11 +72,8 @@ const scrollToSection = (sectionId) => {
 
 const navItems = computed(() => {
     return [
-        // { id: 'sobre', label: 'sobre' },
-        // { id: 'skills', label: 'skills' },
         { id: 'experiencia', label: 'Experiência' },
         { id: 'projetos', label: 'projetos' },
-        // { id: 'contato', label: 'contato' },
     ];
 });
 </script>
@@ -110,7 +84,7 @@ const navItems = computed(() => {
     <nav class="fixed top-0 w-full bg-white/95 backdrop-blur-sm shadow-lg z-50">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between items-center h-16">
-          <h1 class="text-2xl font-headline font-bold text-custom-primary">Felício Almeida.</h1>
+          <h1 class="text-2xl font-headline font-bold text-custom-primary">Felício</h1>
           <ul class="flex gap-8">
             <li v-for="item in navItems" :key="item.id">
               <button
@@ -125,17 +99,17 @@ const navItems = computed(() => {
       </div>
     </nav>
 
-    <div class="pt-32 pb-20 px-4 center text-black">
-      <div class="max-w-4xl mx-auto animate-fade-in flex flex-col justify-center w-full">
+    <div class="pt-28 pb-14 px-4 center text-black">
+      <div class="max-w-4xl mx-auto animate-fade-in flex flex-col gap-4 justify-center w-full items-center">
         <p class="mb-2">Sejam bem vindos, sou</p>
         <h2 class="mb-4 text-4xl sm:text-5xl font-headline font-bold text-black">Felício Almeida.</h2>
-        <p class="text-xl mb-5 opacity-95 max-w-2xl text-black">
+        <p class="text-xl mb-5 opacity-95 max-w-2xl text-black text-justify">
           Construo soluções eficientes e criativas para fazer pessoas mais felizes com tecnologia. Gosto muito de resolver problemas de diversos tipos, seja fazendo sistemas completos 
           ou trabalhando com infra. Minha stack principal é Vue e PHP mas me divirto em várias áreas incluindo devops.
         </p>
         <p class="text-xl mb-5">Tecnologias que trabalho:</p>
         
-        <div class="flex flex-wrap justify-center gap-6 p-6 bg-gray-50 rounded-xl shadow-xl max-w-5xl mx-auto">
+        <div class="flex flex-wrap justify-center gap-6 p-6 bg-gray-50 rounded-xl shadow-xl max-w-5xl mx-auto mb-4">
           <div class="flex flex-col items-center p-3 w-24 transition duration-300 ease-in-out transform hover:-translate-y-1">
               <Icon icon="logos:php" class="text-3xl mb-1" />
               <p class="text-xs font-semibold text-gray-700">PHP</p>
@@ -242,7 +216,7 @@ const navItems = computed(() => {
             rel="noopener noreferrer"
             class="bg-custom-background text-custom-primary w-12 h-12 rounded-full flex items-center justify-center hover:-translate-y-1 hover:shadow-xl transition-all"
           >
-            <UIcon :name="icons.Github" class="w-6 h-6" />
+            <span class="iconify" data-icon="mdi:briefcase" data-inline="false"></span>
           </a>
           <a
             href="https://www.linkedin.com/in/felicio-almeida/"
@@ -250,13 +224,13 @@ const navItems = computed(() => {
             rel="noopener noreferrer"
             class="bg-custom-background text-custom-primary w-12 h-12 rounded-full flex items-center justify-center hover:-translate-y-1 hover:shadow-xl transition-all"
           >
-            <UIcon :name="icons.Linkedin" class="w-6 h-6" />
+            <span class="iconify" data-icon="mdi:briefcase" data-inline="false"></span>
           </a>
           <a
             href="mailto:feliciorar@gmail.com"
             class="bg-custom-background text-custom-primary w-12 h-12 rounded-full flex items-center justify-center hover:-translate-y-1 hover:shadow-xl transition-all"
           >
-            <UIcon :name="icons.Mail" class="w-6 h-6" />
+             <span class="iconify" data-icon="mdi:briefcase" data-inline="false"></span>
           </a>
         </div>
       </div>
@@ -310,11 +284,9 @@ const navItems = computed(() => {
             <h4 class="text-xl font-semibold text-custom-accent mb-2">{{ exp.title }}</h4>
             <div class="text-custom-text mb-4 space-y-1">
               <div class="flex items-center gap-2">
-                <UIcon :name="exp.icon" class="w-4 h-4 text-custom-accent" />
                 <span>{{ exp.company }}</span>
               </div>
               <div class="flex items-center gap-2">
-                <UIcon :name="icons.Calendar" class="w-4 h-4 text-custom-accent" />
                 <span>{{ exp.period }}</span>
               </div>
             </div>
