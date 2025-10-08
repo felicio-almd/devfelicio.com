@@ -6,14 +6,12 @@ const activeSection = ref('sobre');
 
 const experiences = [
   {
-    title: 'Desenvolvedor Fullstack - Estagiário',
+    title: 'Desenvolvedor Fullstack',
     company: 'Prefeitura Municipal de São Mateus',
     period: '04/2024 - Atual',
     responsibilities: [
-      'Desenvolvimento e manutenção de soluções web escaláveis para transformação digital utilizando PHP, Laravel, JavaScript, React, MySQL e Docker',
-      'Co-liderança no projeto do Sistema Integrado de Gestão Esportiva Municipal, sendo responsável por decisões de arquitetura e implementação de funcionalidades críticas',
-      'Implementação do sistema de ordens de serviço da Secretaria de TI, reduzindo o uso de papel em 90% e alcançando 100% de rastreabilidade',
-      'Documentação técnica e padronização de componentes, promovendo reuso de código'
+      'Trabalhando transformação digital do setor público de São Mateus, o uso de papel em 90% usando soluções e alcançando 100% de rastreabilidade',
+      'Co-liderança em projetos de Sistemas, responsável por decisões de arquitetura e implementação de funcionalidades críticas',
     ]
   },
   {
@@ -22,19 +20,17 @@ const experiences = [
     period: '05/2025 - 07/2025',
     responsibilities: [
       'Desenvolvimento completo de plataforma para gestão de corretores e imobiliárias, desde modelagem de dados até infraestrutura',
-      'Implementação de funcionalidades como controle de status, check-ins, monitoramento em tempo real e sorteios automáticos',
+      'Implementação de funcionalidades como controle de status, check-ins, monitoramento em tempo real e sorteios automáticos. ',
       'Transformação de processo manual em sistema 100% digital, seguro e auditável',
-      'Backend com Laravel, frontend com Next.js e TypeScript, containerização com Docker e deploy em GCP'
     ]
   },
   {
-    title: 'Desenvolvedor Fullstack',
+    title: 'Desenvolvedor Fullstack - Gerente',
     company: 'Adapti Soluções Web (Empresa Jr)',
     period: '12/2023 - 07/2025',
     responsibilities: [
-      'Desenvolvimento de aplicações web com Laravel e React/Next.js, incluindo criação de APIs RESTful',
-      'Liderança de equipe no desenvolvimento e publicação do site Credfacil',
-      'Manutenção de sistemas legados e propostas de melhorias em componentização e automação'
+      'Desenvolvimento de aplicações web com Laravel e React/Next.js',
+      'Liderança de equipe no desenvolvimento, manutenção de sistemas legados e propostas de melhorias em componentização e automação'
     ]
   }
 ];
@@ -43,17 +39,17 @@ const projects = [
   {
     title: 'Sistema de Ordens de Serviço - TI',
     description: 'Sistema completo para gestão de chamados de TI com dashboard, priorização de tarefas e redução de 90% no uso de papel. Inclui checklists e gráficos de desempenho.',
-    techs: ['Laravel', 'MySQL', 'React']
+    techs: ['PHP', 'Laravel', 'MySQL']
   },
   {
     title: 'Sistema de Gestão Esportiva',
     description: 'Plataforma integrada para agendamento de espaços esportivos, gestão de atletas e comunicação com usuários. Co-liderança em arquitetura e desenvolvimento.',
-    techs: ['Laravel', 'Node.js', 'Docker']
+    techs: ['PHP', 'Laravel', 'Typescript', 'React']
   },
   {
     title: 'Benedo - Gestão de Corretores',
     description: 'Sistema completo para gestão de corretores e imobiliárias com sorteios automáticos, check-ins e monitoramento em tempo real. Deploy em Google Cloud.',
-    techs: ['Laravel', 'Next.js', 'TypeScript', 'GCP']
+    techs: ['PHP', 'Laravel', 'Next.js', 'TypeScript', 'GCP']
   }
 ];
 
