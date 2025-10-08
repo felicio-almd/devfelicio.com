@@ -214,68 +214,29 @@ const navItems = computed(() => {
             href="https://github.com/felicio-almd"
             target="_blank"
             rel="noopener noreferrer"
-            class="bg-custom-background text-custom-primary w-12 h-12 rounded-full flex items-center justify-center hover:-translate-y-1 hover:shadow-xl transition-all"
+            class="bg-custom-background text-custom-primary w-12 h-12 rounded-full flex items-center justify-center shadow hover:-translate-y-1 hover:shadow-xl transition-all"
           >
-            <span class="iconify" data-icon="mdi:briefcase" data-inline="false"></span>
+            <Icon icon="mdi:briefcase" class="text-2xl" />
           </a>
           <a
             href="https://www.linkedin.com/in/felicio-almeida/"
             target="_blank"
             rel="noopener noreferrer"
-            class="bg-custom-background text-custom-primary w-12 h-12 rounded-full flex items-center justify-center hover:-translate-y-1 hover:shadow-xl transition-all"
+            class="bg-custom-background text-custom-primary w-12 h-12 rounded-full flex items-center justify-center shadow hover:-translate-y-1 hover:shadow-xl transition-all"
           >
-            <span class="iconify" data-icon="mdi:briefcase" data-inline="false"></span>
+            <Icon icon="mdi:github" class="text-2xl" />
           </a>
           <a
             href="mailto:feliciorar@gmail.com"
-            class="bg-custom-background text-custom-primary w-12 h-12 rounded-full flex items-center justify-center hover:-translate-y-1 hover:shadow-xl transition-all"
+            class="bg-custom-background text-custom-primary w-12 h-12 rounded-full flex items-center justify-center shadow hover:-translate-y-1 hover:shadow-xl transition-all"
           >
-             <span class="iconify" data-icon="mdi:briefcase" data-inline="false"></span>
+             <Icon icon="mdi:email-outline" class="text-2xl" />
           </a>
         </div>
       </div>
     </div>
 
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
-      <!-- <section id="sobre" class="bg-white rounded-2xl shadow-2xl p-8 mb-8">
-        <h3 class="text-3xl font-headline font-bold text-custom-primary mb-6 text-center">Sobre Mim</h3>
-        <p class="text-lg leading-relaxed max-w-4xl mx-auto text-center">
-          Desenvolvedor Fullstack com experiência no desenvolvimento de sistemas escaláveis utilizando PHP, Laravel e MySQL, 
-          com foco em eficiência, automação de processos e organização de dados. Atuei em projetos reais com grande 
-          impacto interno, como sistemas de ordens de serviço e agendamentos, com dashboards e funcionalidades para controle 
-          operacional. Comprometido com boas práticas de desenvolvimento, experiência do cliente e melhoria contínua.
-        </p>
-      </section> -->
-
-      <!-- <section id="skills" class="bg-white rounded-2xl shadow-2xl p-8 mb-8">
-        <h3 class="text-3xl font-headline font-bold text-custom-primary mb-8 text-center">Habilidades Técnicas</h3>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div class="p-6 bg-custom-secondary/20 rounded-xl border-l-4 border-custom-primary">
-            <h4 class="text-xl font-semibold text-custom-primary mb-4">Avançado</h4>
-            <div class="flex flex-wrap gap-2">
-              <span v-for="skill in skills.avancado" :key="skill" class="bg-white px-4 py-2 rounded-full text-sm shadow-sm">
-                {{ skill }}
-              </span>
-            </div>
-          </div>
-          <div class="p-6 bg-custom-secondary/20 rounded-xl border-l-4 border-custom-primary">
-            <h4 class="text-xl font-semibold text-custom-primary mb-4">Intermediário</h4>
-            <div class="flex flex-wrap gap-2">
-              <span v-for="skill in skills.intermediario" :key="skill" class="bg-white px-4 py-2 rounded-full text-sm shadow-sm">
-                {{ skill }}
-              </span>
-            </div>
-          </div>
-          <div class="p-6 bg-custom-secondary/20 rounded-xl border-l-4 border-custom-primary">
-            <h4 class="text-xl font-semibold text-custom-primary mb-4">Ferramentas & DevOps</h4>
-            <div class="flex flex-wrap gap-2">
-              <span v-for="skill in skills.ferramentas" :key="skill" class="bg-white px-4 py-2 rounded-full text-sm shadow-sm">
-                {{ skill }}
-              </span>
-            </div>
-          </div>
-        </div>
-      </section> -->
 
       <section id="experiencia" class="bg-white rounded-2xl shadow-2xl p-8 mb-8">
         <h3 class="text-3xl font-headline font-bold text-custom-primary mb-8 text-center">Experiência Profissional</h3>
@@ -316,40 +277,6 @@ const navItems = computed(() => {
         </div>
       </section>
 
-      <!-- <section id="contato" class="bg-white rounded-2xl shadow-2xl p-8">
-        <h3 class="text-3xl font-headline font-bold text-custom-primary mb-8 text-center">Entre em Contato</h3>
-        <div class="flex flex-wrap justify-center gap-8">
-          <div class="flex items-center gap-4">
-            <div class="bg-custom-accent text-custom-background w-12 h-12 rounded-full flex items-center justify-center">
-              <UIcon :name="icons.Mail" class="w-6 h-6" />
-            </div>
-            <div>
-              <strong class="block text-custom-text">Email</strong>
-              <a href="mailto:feliciorar@gmail.com" class="text-custom-primary hover:underline font-medium">
-                feliciorar@gmail.com
-              </a>
-            </div>
-          </div>
-          <div class="flex items-center gap-4">
-            <div class="bg-custom-accent text-custom-background w-12 h-12 rounded-full flex items-center justify-center">
-              <UIcon :name="icons.Phone" class="w-6 h-6" />
-            </div>
-            <div>
-              <strong class="block text-custom-text">Telefone</strong>
-              <span class="text-custom-text">+55 33 99934-4257</span>
-            </div>
-          </div>
-          <div class="flex items-center gap-4">
-            <div class="bg-custom-accent text-custom-background w-12 h-12 rounded-full flex items-center justify-center">
-              <UIcon :name="icons.MapPin" class="w-6 h-6" />
-            </div>
-            <div>
-              <strong class="block text-custom-text">Localização</strong>
-              <span class="text-custom-text">São Mateus, ES - Brasil</span>
-            </div>
-          </div>
-        </div>
-      </section> -->
     </div>
 
     <footer class="bg-white/95 py-8 text-center text-custom-text">

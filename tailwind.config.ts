@@ -3,7 +3,11 @@ import defaultTheme from 'tailwindcss/defaultTheme';
 
 export default {
     content: [
-        // ... paths
+        './components/**/*.{vue,js,ts}',
+        './layouts/**/*.vue',
+        './pages/**/*.vue',
+        './plugins/**/*.{js,ts}',
+        './app.vue',
     ],
     theme: {
         extend: {
@@ -15,8 +19,7 @@ export default {
                 'custom-accent': '#5a9dda',
             },
             fontFamily: {
-                headline: ['Montserrat', ...defaultTheme.fontFamily.sans],
-                body: ['Roboto', ...defaultTheme.fontFamily.sans],
+                sans: ['Outfit', 'sans-serif'],
             },
         },
     },
